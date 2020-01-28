@@ -3,12 +3,15 @@ const getLanguageInfo = require('../helpers/getLanguageInfo');
 
 exports.languages = async (req, res, next) => {
     try {
-        const { data } = await axios.get("https://github-trending-api.now.sh/");
+        const result = await axios.get("https://github-trending-api.now.sh/");
         const languages = new Set();
         const responseObject = {
             count: 0,
             languages: []
         };
+
+        // guarantee to not exceed 100 repository
+        const data = result.data.slice(0, 100);
 
         // exports all the languages from the repositories
         data.forEach(repo => {
