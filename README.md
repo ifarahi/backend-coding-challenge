@@ -30,19 +30,19 @@ GET   /api/v1/repositories/languages
 
 ```json
 {
-    count: 1,
-    languages: [
+    "count": 1,
+    "languages": [
     {
-        language: "JavaScript",
-        repositories_count: 1,
-        repositories: [
+        "language": "JavaScript",
+        "repositories_count": 1,
+        "repositories": [
             {
-                name: "jira_clone",
-                author: "oldboyxx",
-                url: "https://github.com/oldboyxx/jira_clone",
-                stars: 2049,
-                forks: 167,
-                description: "A simplified Jira clone built with React/Babel (Client), and Node/TypeScript (API)."
+                "name": "jira_clone",
+                "author": "oldboyxx",
+                "url": "https://github.com/oldboyxx/jira_clone",
+                "stars": 2049,
+                "forks": 167,
+                "description": "A simplified Jira clone built with React/Babel (Client), and Node/TypeScript (API)."
             }
         ]
     }
